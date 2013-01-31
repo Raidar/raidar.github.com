@@ -1,26 +1,26 @@
-/* ВЫРАЖЕНИЕ И ФОРМУЛА
+/* Р’Р«Р РђР–Р•РќРР• Р Р¤РћР РњРЈР›Рђ
    (equation & formula) */
 
-/* Общее оформление */
+/* РћР±С‰РµРµ РѕС„РѕСЂРјР»РµРЅРёРµ */
 .equ { font-family: Times New Roman; text-align: left;
-       text-indent: 0em; vertical-align: baseline } /* Соотношение */
+       text-indent: 0em; vertical-align: baseline } /* РЎРѕРѕС‚РЅРѕС€РµРЅРёРµ */
 .eqs { font-family: Times New Roman; text-align: center;
-       text-indent: 0em; vertical-align: baseline } /* Подотношение */
-.opr { font-size: x-large } /* Оператор: Интеграл, Сумма, Произведение */
-.opx { font-size: xx-large } /* Скобки */
-span.over { text-decoration: overline } /* Надлиния: Корень, Среднее */
-/*SPAN.equ { vertical-align: baseline } /* Выравнивание */
-span.sym { font-family: monospace } /* Спец. символы */
+       text-indent: 0em; vertical-align: baseline } /* РџРѕРґРѕС‚РЅРѕС€РµРЅРёРµ */
+.opr { font-size: x-large } /* РћРїРµСЂР°С‚РѕСЂ: РРЅС‚РµРіСЂР°Р», РЎСѓРјРјР°, РџСЂРѕРёР·РІРµРґРµРЅРёРµ */
+.opx { font-size: xx-large } /* РЎРєРѕР±РєРё */
+span.over { text-decoration: overline } /* РќР°РґР»РёРЅРёСЏ: РљРѕСЂРµРЅСЊ, РЎСЂРµРґРЅРµРµ */
+/*SPAN.equ { vertical-align: baseline } /* Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ */
+span.sym { font-family: monospace } /* РЎРїРµС†. СЃРёРјРІРѕР»С‹ */
 p.over { text-align: center; text-indent: 0mm; line-height: 125%;
-         border-top: 1px outset black } /* Надлиния: Дробное выражение */
+         border-top: 1px outset black } /* РќР°РґР»РёРЅРёСЏ: Р”СЂРѕР±РЅРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ */
 
-/* Скрытая таблица для формулы */
+/* РЎРєСЂС‹С‚Р°СЏ С‚Р°Р±Р»РёС†Р° РґР»СЏ С„РѕСЂРјСѓР»С‹ */
 table.inl { display: inline }
 table.eqf { border-style: none; vertical-align: baseline }
 .eqf { border-style: none; vertical-align: baseline; padding: 0em }
 /*.eqm { border-style: none; vertical-align: middle; padding: 0em }*/
 .eqm { vertical-align: middle }
-/* Выравнивание спец. символов и над- и подсимволов */
+/* Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ СЃРїРµС†. СЃРёРјРІРѕР»РѕРІ Рё РЅР°Рґ- Рё РїРѕРґСЃРёРјРІРѕР»РѕРІ */
 .eqh { line-height: 100% } /*half*/
 .eqd { line-height: 125% } /*double*/
 .eqt { line-height: 150% } /*triple*/

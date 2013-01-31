@@ -1,13 +1,13 @@
-/* ТАБЛИЦА */
+/* РўРђР‘Р›РР¦Рђ */
 table { text-align: center; vertical-align: middle;
         margin: 0em auto; padding: 0em; empty-cells: show;
-        border-collapse: collapse; border: thin outset } /* Обычная таблица */
-.untbl { border-style: none } /* Таблица без границ */
-tr { text-align: center; vertical-align: middle } /* Обычная строка */
+        border-collapse: collapse; border: thin outset } /* РћР±С‹С‡РЅР°СЏ С‚Р°Р±Р»РёС†Р° */
+.untbl { border-style: none } /* РўР°Р±Р»РёС†Р° Р±РµР· РіСЂР°РЅРёС† */
+tr { text-align: center; vertical-align: middle } /* РћР±С‹С‡РЅР°СЏ СЃС‚СЂРѕРєР° */
 th { padding: 0.1em 0.25em 0.1em 0.25em;
-     border-style: inset; border-width: 2pt 0pt 1pt 1pt } /* Обычная шапка */
+     border-style: inset; border-width: 2pt 0pt 1pt 1pt } /* РћР±С‹С‡РЅР°СЏ С€Р°РїРєР° */
 td { padding: 0.1em 0.25em 0.1em 0.25em;
-     border-style: inset; border-width: 2pt 0pt 1pt 1pt } /* Обычная ячейка */
+     border-style: inset; border-width: 2pt 0pt 1pt 1pt } /* РћР±С‹С‡РЅР°СЏ СЏС‡РµР№РєР° */
 tr.sep, td.sep, th.sep
    { padding: 0em 0em 0em 0em; font-size: xx-small;
-     border-style: inset; border-width: 0pt 1pt 1pt 0pt } /* Разделитель */
+     border-style: inset; border-width: 0pt 1pt 1pt 0pt } /* Р Р°Р·РґРµР»РёС‚РµР»СЊ */
