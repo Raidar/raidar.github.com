@@ -1,0 +1,489 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Сайт РАИ - Programs - Scripts for FAR</title>
+<link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+
+<body>
+
+<h1>Скрипты для FAR Manager / Scripts for FAR Manager</h1>
+
+<hr />
+
+<a name="Content"></a>
+<p class="contents left _indent">Оглавление</p>
+<p> </p>
+<ul>
+<li><a href="#LuaFAR">LuaFAR</a></li>
+<li><a href="#Plugins">Плагины</a></li>
+</ul>
+<ul>
+<li><a href="#Scripts">Скрипты</a></li>
+</ul>
+<ul>
+<li><a href="#Packs">Пакеты</a>
+ <ul>
+ <li><a href="#LF_context">Пакет LF context</a></li>
+ <li><a href="#Rh_Scripts">Пакет Rh_Scripts</a></li>
+ <li><a href="#Rh_Macros">Пакет Rh_Macros</a></li>
+ <li><a href="#LFA_config">Пакет LFA config</a></li>
+ <li><a href="#fl_scripts">Набор fl_scripts</a></li>
+ </ul>
+</li>
+</ul>
+<ul>
+<li><a href="#Links">Ссылки</a>
+</ul>
+<p><a href="index.htm"><strong>Содержание раздела</strong></a></p>
+
+<hr />
+
+<p>Все иллюстрации выполнены в FAR Manager
+с выбранным шрифтом "DejaVu Sans Mono".</p>
+
+<hr />
+
+<a name="LuaFAR"></a>
+<h2>LuaFAR</h2>
+
+<p>Библиотека LuaFAR позволяет расширить возможности FAR Manager
+при помощи написания плагинов, скриптов и утилит на языке Lua.</p>
+<p>Скрипты обычно реализуют простые действия, утилиты — более сложные,
+комплексные. Скрипты и утилиты обычно объединяются в наборы и пакеты
+в соответствии с предпочтениями их разработчиков.</p>
+<p> </p>
+<p>Библиотека LuaFAR, LuaFAR for Editor, LuaFAR Search
+и ряд других плагинов разработаны Сэмуэлом Зейгерманом
+(<a href="https://github.com/shmuz/">Shmuel Zeigerman</a>).</p>
+
+<a name="Plugins"></a>
+<h2>Плагины</h2>
+
+<p>LuaFAR for Editor (LuaFAR для Редактора) — плагин с набором утилит,
+производящих различные действия по управлению работой в редакторе FAR Manager.</p>
+<p>LuaFAR Search (LuaFAR Поиск) — плагин для поиска и замены текста в редакторе
+FAR Manager.</p>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<p> </p>
+<hr />
+
+<a name="Scripts"></a>
+<h2>Скрипты</h2>
+<p>Отдельных скриптов и утилит для FAR пока нет.</p>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<p> </p>
+<hr />
+
+<a name="Packs"></a>
+<h2>Пакеты</h2>
+
+<a name="LF_context"></a>
+<h3>Пакет LF context</h3>
+
+<p>LuaFAR context — пакет для определения типов файлов и работы
+с файлами конфигураций параметров, связанных с типами файлов.</p>
+<p>Пакет позволяет задать единую конфигурацию типов файлов в разных скриптах
+и плагинах LuaFAR, а также использовать в них конфигурации, зависящие от типа
+текущего файла.</p>
+<p>Пакет разработан на основе конфигураций, используемых
+в <strong>fl_scripts</strong>, доработан и расширен совместными усилиями
+с <strong>maxfl</strong> .
+LF context требуется для работы
+пакета <a href="#Rh_Scripts">Rh_Scripts</a>,
+пакета <a href="#LFA_config">LuaFAR area config</a>,
+и набора <a href="#fl_scripts">fl_scripts</a>.</p>
+
+<!--
+<p> </p>
+<p>Для работы пакета требуется:</p>
+<ul>
+<li>Lua v.5.1.4 (lua5.1.dll или lua51.dll).</li>
+<li>FAR Manager v.2.0 build 1802 .</li>
+<li>LuaFAR v.2.8.0 .</li>
+</ul>
+
+<p>Ссылка:
+<a href="FarScripts/LF_context-1.0.7.1.7z">Пакет</a>
+v.1.0.7.1 [Build от 2011-02-20] (55 KiB).<br /></p>
+-->
+<p> </p>
+<p>Для работы тестовой сборки требуется:</p>
+<ul>
+<li>Lua v.5.1.4 (lua5.1.dll или lua51.dll).</li>
+<li>FAR Manager v.3.0 build 3064 .</li>
+<li>LuaFAR v.3.1.1 .</li>
+</ul>
+
+<p><a href="FarScripts/LF_context-3.0.5.7z"><em>Тестовая</em> сборка</a>
+v.3.0.5.0 [Build от 2013-01-31] (0,088 MiB).</p>
+
+<p><strong>Внимание:</strong>
+Перед установкой обязательно прочтите <code>install.rus</code>.
+Для "LuaFAR для Редактора" пакет достаточно установить в каталог плагина.
+Пакет можно установить в каталог, доступный для всех скриптов LuaFAR.
+Порядок задания такого каталога описан в файле справки
+<code>context\faq\faq_rus.hlf</code>,
+тема «Где размещать общие скрипты и библиотеки?».</p>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<a name="Rh_Scripts"></a>
+<h3>Пакет Rh_Scripts</h3>
+
+<p>Rh_Scripts — пакет скриптов и утилит для "LuaFAR для Редактора".</p>
+<p>Состав:</p>
+<ul>
+ <li>Утилита <a href="#Rh_SP_LUM">
+     «Пользовательское меню Lua»</a> (<strong>LUM</strong>).</li>
+ <li>Утилита <a href="#Rh_SP_RM">
+     «Прямоугольное меню»</a> (<strong>RectMenu</strong>).</li>
+ <li>Общие скрипты:<ul>
+  <li>Скрипт «Настраиваемое меню» (<strong>CustomMenu</strong>).</li>
+  <li>Скрипт «Фильтрационное меню» (<strong>FilterMenu</strong>).</li>
+  <li>Скрипт «Вызыватель меню выбранного вида» (<strong>MenuCaller</strong>).</li>
+  <li>Скрипт «Формирователь текста для пунктов меню» (<strong>MenuTexter</strong>).</li>
+  <li>Скрипт «Меню из пунктов вывода символов» (<strong>CharsItems</strong>).</li>
+  <li>Скрипт «Конфигуратор пакета Rh_Scripts» (<strong>rhsConfig</strong>).</li>
+ </ul></li>
+ <li>Скрипты для редактора:<ul>
+  <li>Скрипт «Текстовые шаблоны» (<strong>TextTemplate</strong>).</li>
+  <li>Скрипт «Завершение слов» (<strong>WordComplete</strong>).</li>
+  <li>Скрипт «Усекатель пустоты» (<strong>VoidTruncate</strong>).</li>
+  <li>Скрипт для использования скриптов в <em>авторежиме</em>.</li>
+ </ul></li>
+ <li>Служебные скрипты для работы скриптов и утилит.</li>
+</ul>
+
+<a name="Rh_SP_LUM"></a>
+<p>Утилита <em>«Пользовательское меню Lua»</em>
+позволяет выводить меню в зависимости от типа файла.</p>
+<p>Возможности:</p>
+<ul>
+ <li>Привязка файла к типу с помощью пакета LuaFAR context.</li>
+ <li>Привязка типа к выводимому меню в <code>lua</code>-файле.</li>
+ <li>Поддерживаемые меню: прямоугольное, фильтрационное и поисковое.</li>
+ <li>Виды пунктов: подменю, макросы, шаблоны, скрипты и команды.</li>
+ <li>Назначение комбинаций клавиш на пункты меню разными способами.</li>
+ <li>Поддержка настроек собственных меню LUM и локализации текста.</li>
+</ul>
+
+<p>Примеры меню LUM:</p>
+<ul>
+ <li><a href="#Rh_SP_LuaEUM">LuaEUM</a> — для редактора.</li>
+ <li><a href="#Rh_SP_LuaPUM">LuaPUM</a> — для панелей.</li>
+ <li><a href="#Rh_SP_LumSVN">LumSVN</a> — для TortoiseSVN.</li>
+ <li>LumFLS — для работы с fl_scripts.</li>
+</ul>
+
+<p>Примеры общих подменю:</p>
+<ul>
+ <li>Разные скрипты (<a href="_Images/um_othersc.png">Other scripts</a>):<br />
+     <a href="_Images/um_oth_inf.png">Общая информация</a>,
+     <a href="_Images/um_oth_lfc.png">Применение LF context</a>,
+     <a href="_Images/um_oth_hw_.png">Пример Hello, world!</a>.</li>
+ <li>Примеры команд (<a href="_Images/um_runcmds.png">Command samples</a>):<br />
+     Показ File_id.diz различными способами.</li>
+ <!--<li>Макросы FAR (<a href="_Images/um_fmacros.png">FAR macros</a>):<br />
+     Управление загрузкой из реестра / сохранением в реестр.</li>-->
+</ul>
+
+<a name="Rh_SP_LuaEUM"></a>
+<p>Примеры подменю LuaEUM (для <a href="_Images/luaeum.png">редактора</a>):</p>
+<ul>
+ <li>Вставка шаблона (Template Insert).<br />
+     Готовые подменю для
+     <a href="_Images/eum_j_lua.png">Lua</a>,
+     <a href="_Images/eum_j_ccpp.png">C/C++</a>,
+     <a href="_Images/eum_j_pascal.png">Pascal</a>,
+     <a href="_Images/eum_j_html.png">Html</a>.</li>
+ <li>Наборы символов (<a href="_Images/um_charkits.png">Character kits</a>):
+  <ul>
+   <li>Буквы (<a href="_Images/um_cletgreek.png">греческие</a>,
+              <a href="_Images/um_cletcyril.png">кириллица</a>).</li>
+   <li>Математика (<a href="_Images/um_cmathsubs.png">основные</a>
+                 и <a href="_Images/um_cmathidxs.png">другие</a> индексы).</li>
+   <li>Пунктуация (<a href="_Images/um_cpunsymbs.png">символы</a>-знаки,
+                   <a href="_Images/um_cpunspace.png">пробелы и черты</a>).</li>
+  </ul>
+ <li>Кавычки/скобки (<a href="_Images/eum_q_quotes.png">Quotes/brackets</a>):
+  <ul>
+   <li>Закавычивание (<a href="_Images/eum_q_enquote.png">Quote text</a>).</li>
+   <li>Раскавычивание (<a href="_Images/eum_q_dequote.png">Dequote text</a>).</li>
+  </ul></li>
+ <li>Lua-скрипты (Lua scripts):<br />
+  <ul>
+   <li>Чистка текста (<a href="_Images/eum_cleartext.png">Clear text</a>).</li>
+   <li>Усечение пустоты (<a href="_Images/eum_truncate.png">Truncate void</a>).</li>
+  </ul></li>
+</ul>
+
+<a name="Rh_SP_LuaPUM"></a>
+<p>Примеры подменю LuaPUM (для <a href="_Images/luapum.png">панелей</a>).</p>
+<ul>
+ <li>Меню Git (<a href="_Images/pum_git.png">Git menu</a>).</li>
+ <!--<li><a href="#Rh_SP_Git">Git</a>: Меню команд Git.</li>-->
+</ul>
+
+
+<a name="Rh_SP_LumSVN"></a>
+<p>Примеры подменю LumSVN (для <a href="_Images/lumsvn.png">TortoiseSVN</a>):</p>
+<ul>
+ <li>Меню команд TortoiseSVN (см. <a href="#Rh_SP_tSVN">TortoiseSVN</a>).</li>
+</ul>
+
+<a name="Rh_SP_tSVN"></a>
+<p>Подменю LumSVN <em>«TortoiseSVN»</em>
+позволяет выполнять почти все команды TortoiseSVN.</p>
+<p>Особенности:</p>
+<ul>
+ <li>Аналог контекстного меню TortoiseSVN Проводника.</li>
+ <li>Работает только с текущим элементом активной неплагиновой панели.</li>
+ <li>Различаются: файл/папка, рабочая копия или нет, версионированный или нет.</li>
+ <li>Для работы используются <code>TortoiseProc.exe</code>
+     и <code>SubWCRev.exe</code> из TortoiseSVN.</li>
+ <li>Настройки хранятся в файле<br />
+  <code>%FarProfile%\scripts\Rh_Scripts\LumSVN\config\TortoiseSVN.cfg</code>.</li>
+</ul>
+
+<p>Иллюстрация подменю «TortoiseSVN»:</p>
+<ul>
+  <li>версионированные
+      <a href="_Images/tsvn_svndir.png">папка</a>
+    и <a href="_Images/tsvn_svnfile.png">файл</a></li>
+  <li><a href="_Images/tsvn_nwcdir.png">папка</a>
+    и <a href="_Images/tsvn_nwcfile.png">файл</a> нерабочей копии,</li>
+  <li>неверсионированные
+      <a href="_Images/tsvn_unvdir.png">папка</a>
+    и <a href="_Images/tsvn_unvfile.png">файл</a>.</li>
+</ul>
+
+<p> </p>
+
+<a name="Rh_SP_RM"></a>
+<p>Утилита <em>«Прямоугольное меню»</em>
+позволяет выводить меню в несколько строк и столбцов.</p>
+<p>Возможности:</p>
+<ul>
+ <li>Меню в виде таблицы из нескольких строк и столбцов.</li>
+ <li>Параметры настройки меню в целом и отдельных пунктов.</li>
+ <li>Маркирование цветом заданных символов текста пунктов меню.</li>
+ <li>Поддерживаемые меню: фильтрационное и поисковое.</li>
+ <li>Внешний вид: список, главное меню, всплывающее меню и т.д.</li>
+</ul>
+
+<!--
+<p> </p>
+<p>Для работы пакета требуется:</p>
+<ul>
+ <li>Lua v.5.1.4 (lua5.1.dll или lua51.dll).</li>
+ <li>FAR Manager v.2.0 build 1802 .</li>
+ <li>LuaFAR v.2.8.0.</li>
+ <li>LuaFAR for Editor v.2.8.0 .</li>
+ <li>LF context v.1.0.7.1 .</li>
+ <li>для flsLUM — <a href="#fl_scripts">fl_scripts</a> v.0.3.10+ .</li>
+</ul>
+
+<p>Ссылка:
+<a href="FarScripts/Rh_Scripts-2.0.9.2.7z">Пакет</a>
+v.2.0.9.2 [Build от 2011-02-21] (168 KiB).<br /></p>
+-->
+<p> </p>
+<p>Для работы тестовой сборки требуется:</p>
+<ul>
+ <li>Lua v.5.1.4 (lua5.1.dll или lua51.dll).</li>
+ <li>FAR Manager v.3.0 build 3064 .</li>
+ <li>LuaFAR v.3.1.1.</li>
+ <li>LuaFAR for Editor v.3.1.2 .</li>
+ <li>LF context v.3.0.5.0 .</li>
+ <!--<li>для flsLUM — <a href="#fl_scripts">fl_scripts</a> v.0.3.10+ .</li>-->
+</ul>
+
+<p><a href="FarScripts/Rh_Scripts-3.0.5.7z"><em>Тестовая</em> сборка</a>
+v.3.0.5.0 [Build от 2013-01-31] (0,191 MiB).</p>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<a name="Rh_Macros"></a>
+<h3>Пакет Rh_Macros</h3>
+
+<p>Rh_Macros — пакет скриптов и макросов для FAR Manager.</p>
+
+<p> </p>
+<p>Для работы тестовой сборки требуется:</p>
+<ul>
+ <li>Lua v.5.1.4 (lua5.1.dll или lua51.dll).</li>
+ <li>FAR Manager v.3.0 build 3064 .</li>
+ <li>LuaFAR v.3.1.1.</li>
+ <li>LuaFAR for Editor v.3.1.2 .</li>
+ <li>LF context v.3.0.4.7 .</li>
+ <li>Rh_Scripts v.3.0.4.18 .</li>
+ <!--<li>для flsLUM — <a href="#fl_scripts">fl_scripts</a> v.0.3.10+ .</li>-->
+</ul>
+
+<p><a href="FarScripts/Rh_Macros-3.0.4.7z"><em>Тестовая</em> сборка</a>
+v.3.0.4.1 [Build от 2013-01-27] (0,015 MiB).</p>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<p> </p>
+<hr />
+
+<p>Набор fl_scripts и пакет LuaFAR area config разработаны Максимом Гончаром
+(maxfl) и в настоящее время поддерживаются С. Зейгерманом и мной.</p>
+<p> </p>
+
+<a name="LFA_config"></a>
+<h3>Пакет LFA config</h3>
+
+<p>LuaFAR area config — пакет для плагина "LuaFAR для Редактора",
+предназначенный для автонастройки редактора FAR в зависимости от типа файла.</p>
+
+<p>Возможности:</p>
+<ul>
+ <li>Задание настроек редактора в зависимости от типа файла.</li>
+ <li>Показ номеров строк (слева от поля редактирования).</li>
+ <li>Подсветка позиции конца строки и конца файла.</li>
+ <li>Подсветка правой границы и последней строки файла.</li>
+</ul>
+
+<p>Иллюстрация работы пакета:
+<a href="_Images/lfecfg1.png">пример 1</a>,
+<a href="_Images/lfecfg2.png">пример 2</a>.</p>
+
+<!--<p>Примеры работы пакета:</p>
+<p><img alt="Пример 1" src="_Images/lfecfg1.png" /></p>
+<p> </p>
+<p><img alt="Пример 2" src="_Images/lfecfg2.png" /></p>-->
+<!--
+<p> </p>
+<p>Для работы пакета требуется:</p>
+<ul>
+ <li>Lua v.5.1.4 (lua5.1.dll или lua51.dll).</li>
+ <li>FAR Manager v.2.0 build 1802 .</li>
+ <li>LuaFAR v.2.8.0.</li>
+ <li>LuaFAR for Editor v.2.8.0 .</li>
+ <li>LF context v.1.0.7 .</li>
+</ul>
+
+<p>Ссылка:
+<a href="FarScripts/lfe_config-1.0.7.7z">Пакет</a>
+v.1.0.7 [Build от 2011-02-19] (13 KiB).<br /></p>
+-->
+<p> </p>
+<p>Для работы тестовой сборки требуется:</p>
+<ul>
+ <li>Lua v.5.1.4 (lua5.1.dll или lua51.dll).</li>
+ <li>FAR Manager v.3.0 build 3064 .</li>
+ <li>LuaFAR v.3.1.1.</li>
+ <li>LuaFAR for Editor v.3.1.2 .</li>
+ <li>LF context v.3.0.4.7 .</li>
+</ul>
+
+<p><a href="FarScripts/lfa_config-3.0.4.7z"><em>Тестовая</em> сборка</a>
+v.3.0.4.0 [Build от 2013-01-27] (0,017 MiB).</p>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<a name="fl_scripts"></a>
+<h3>Набор fl_scripts</h3>
+
+<p>FAR Lua scripts — набор скриптов для "LuaFAR для Редактора".</p>
+
+<p> </p>
+<p>Для работы пакета требуется:</p>
+<ul>
+ <li>Lua v.5.1.4 (lua5.1.dll или lua51.dll).</li>
+ <li>FAR Manager v.2.0 build 1802 .</li>
+ <li>LuaFAR v.2.8.0.</li>
+ <li>LuaFAR for Editor v.2.8.0 .</li>
+ <li>LF context v.1.0.7.1 .</li>
+</ul>
+
+<p>Ссылка:
+<a href="FarScripts/fl_scripts-0.3.10.1.7z">Пакет</a>
+v.0.3.10.1 [Build от 2011-02-21] (32 KiB).<br /></p>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<hr />
+
+<a name="Links"></a>
+<h2>Ссылки</h2>
+<p>Основные ссылки:</p>
+<p> </p>
+<ul>
+<li>Язык <a href="http://www.lua.org/">Lua</a>.</li>
+<li><a href="http://www.farmanager.com/">FAR Manager</a>.</li>
+<li><a href="https://github.com/shmuz/LuaFAR/">LuaFAR</a> и плагины.</li>
+</ul>
+
+<!-- TODO: Переделать, добавив ссылки на обсуждение! -->
+
+<p><a href="http://forum.farmanager.com/viewforum.php?f=11">Анонсы</a>
+на форуме <a href="http://forum.farmanager.com/">FAR Manager</a>:</p>
+<p> </p>
+<ul>
+<li>LuaFAR и плагины:
+ <ul>
+ <li>Библиотека
+ <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=2833">LuaFAR</a>
+(<a href="http://forum.farmanager.com/viewtopic.php?f=5&t=4365">обсуждение</a>,
+ <a href="https://github.com/shmuz/LuaFAR/">GitHub</a>).</li>
+ <li>Плагин
+ <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=3551">LuaFAR для Редактора</a>
+(<a href="http://forum.farmanager.com/viewtopic.php?f=5&t=3552">обсуждение</a>,
+ <a href="https://github.com/shmuz/luafar4editor/">GitHub</a>).</li>
+ <li>Плагин
+ <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=4752">LuaFAR Search</a>
+(<a href="http://forum.farmanager.com/viewtopic.php?f=5&t=4365">обсуждение</a>).</li>
+ </ul>
+</li>
+</ul>
+<ul>
+<li>Скрипты и пакеты:
+ <ul>
+ <li>Пакет
+ <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=5140">LF context</a>
+(<a href="http://forum.farmanager.com/viewtopic.php?f=5&t=4393">обсуждение</a>,
+ <a href="https://github.com/Raidar/LuaFAR-context/">GitHub</a>).</li>
+ <li>Пакет
+ <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=4387">Rh_Scripts</a>
+(<a href="http://forum.farmanager.com/viewtopic.php?f=5&t=4393">обсуждение</a>,
+ <a href="https://github.com/Raidar/Rh_Scripts/">GitHub</a>).</li>
+ <li>Пакет Rh_Macros
+(<a href="https://github.com/Raidar/Rh_Macros/">GitHub</a>).</li>
+<!--
+ <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=4387">Rh_Macros</a>
+(<a href="http://forum.farmanager.com/viewtopic.php?f=5&t=4393">обсуждение</a>,
+ <a href="https://github.com/Raidar/Rh_Macros/">GitHub</a>).</li>
+-->
+ <li>Пакет
+ <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=5538">LFA config</a>
+(<a href="http://forum.farmanager.com/viewtopic.php?f=5&t=5539">обсуждение</a><!--,
+ <a href="https://github.com/Raidar/LFA_config/">GitHub</a>-->).</li>
+ <li>Набор
+ <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=4389">fl_scripts</a>
+(<a href="http://forum.farmanager.com/viewtopic.php?f=5&t=4390">обсуждение</a>,
+ <a href="https://github.com/Raidar/fl_scripts/">GitHub</a>).</li>
+ </ul>
+</li>
+</ul>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<p> </p>
+<hr />
+<p class="center">
+<a href="../index.htm">Основное содержание</a> \
+<a href="index.htm">Программы</a></p>
+
+</body>
+
+</html>
