@@ -1,0 +1,13 @@
+/* ТАБЛИЦА */
+table { text-align: center; vertical-align: middle;
+        margin: 0em auto; padding: 0em; empty-cells: show;
+        border-collapse: collapse; border: thin outset } /* Обычная таблица */
+.untbl { border-style: none } /* Таблица без границ */
+tr { text-align: center; vertical-align: middle } /* Обычная строка */
+th { padding: 0.1em 0.25em 0.1em 0.25em;
+     border-style: inset; border-width: 2pt 0pt 1pt 1pt } /* Обычная шапка */
+td { padding: 0.1em 0.25em 0.1em 0.25em;
+     border-style: inset; border-width: 2pt 0pt 1pt 1pt } /* Обычная ячейка */
+tr.sep, td.sep, th.sep
+   { padding: 0em 0em 0em 0em; font-size: xx-small;
+     border-style: inset; border-width: 0pt 1pt 1pt 0pt } /* Разделитель */

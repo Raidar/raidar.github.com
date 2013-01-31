@@ -1,0 +1,27 @@
+/* ВЫРАЖЕНИЕ И ФОРМУЛА
+   (equation & formula) */
+
+/* Общее оформление */
+.equ { font-family: Times New Roman; text-align: left;
+       text-indent: 0em; vertical-align: baseline } /* Соотношение */
+.eqs { font-family: Times New Roman; text-align: center;
+       text-indent: 0em; vertical-align: baseline } /* Подотношение */
+.opr { font-size: x-large } /* Оператор: Интеграл, Сумма, Произведение */
+.opx { font-size: xx-large } /* Скобки */
+span.over { text-decoration: overline } /* Надлиния: Корень, Среднее */
+/*SPAN.equ { vertical-align: baseline } /* Выравнивание */
+span.sym { font-family: monospace } /* Спец. символы */
+p.over { text-align: center; text-indent: 0mm; line-height: 125%;
+         border-top: 1px outset black } /* Надлиния: Дробное выражение */
+
+/* Скрытая таблица для формулы */
+table.inl { display: inline }
+table.eqf { border-style: none; vertical-align: baseline }
+.eqf { border-style: none; vertical-align: baseline; padding: 0em }
+/*.eqm { border-style: none; vertical-align: middle; padding: 0em }*/
+.eqm { vertical-align: middle }
+/* Выравнивание спец. символов и над- и подсимволов */
+.eqh { line-height: 100% } /*half*/
+.eqd { line-height: 125% } /*double*/
+.eqt { line-height: 150% } /*triple*/
+/*.eqq { line-height: 175% } /*quadruple*/

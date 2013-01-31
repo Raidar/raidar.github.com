@@ -1,0 +1,10 @@
+/* ТАБЛИЦА */
+table { text-align: center; vertical-align: middle;
+        margin: 0em auto; padding: 0em; empty-cells: show;
+        border-style: none } /* Таблица без границ */
+.tbl { border-collapse: collapse; border: thin outset } /* Обычная таблица */
+tr { text-align: center; vertical-align: middle } /* Строка */
+th, td { border-style: none; vertical-align: baseline } /* Шапка и ячейка */
+.th { border-style: inset; border-width: 1pt 0pt 1pt 1pt } /* Обычная шапка */
+.td { border-style: inset; border-width: 1pt 0pt 0pt 1pt } /* Обычная ячейка */
+.pad { padding: 0.1em 0.25em 0.1em 0.25em; } /* Обычные отступы */
