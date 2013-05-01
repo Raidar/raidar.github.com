@@ -138,6 +138,7 @@ v.3.0.8.0 [Build от 2013-04-06] (0,075 MiB).</p>
   <li>Скрипт «Вызыватель меню выбранного вида» (<strong>MenuCaller</strong>).</li>
   <li>Скрипт «Формирователь текста для пунктов меню» (<strong>MenuTexter</strong>).</li>
   <li>Скрипт «Календарь» (<strong>Calendar</strong>).</li>
+  <li>Скрипт «Таблица символов» (<strong>CharsMap</strong>).</li>
   <li>Скрипт «Меню из пунктов вывода символов» (<strong>CharsMenu</strong>).</li>
   <li>Скрипт «Конфигуратор пакета Rh_Scripts» (<strong>rhsConfig</strong>).</li>
  </ul></li>
@@ -160,7 +161,7 @@ v.3.0.8.0 [Build от 2013-04-06] (0,075 MiB).</p>
  <li>Привязка типа к выводимому меню в <code>lua</code>-файле.</li>
  <li>Поддерживаемые меню: прямоугольное, фильтрационное и поисковое.</li>
  <li>Виды пунктов: подменю, макросы, шаблоны, скрипты и команды.</li>
- <li>Назначение комбинаций клавиш на пункты меню.</li>
+ <li>Назначение нескольких комбинаций клавиш на пункты меню.</li>
  <li>Поддержка настроек собственных меню LUM и локализации текста.</li>
 </ul>
 
@@ -175,16 +176,22 @@ v.3.0.8.0 [Build от 2013-04-06] (0,075 MiB).</p>
 <ul>
  <li>Дополнения (<a href="images/um_addons.png">Addon scripts</a>):<br />
   <ul>
-   <li>Календарь:<br />
-     <a href="images/um_calendar_terra.png">Григорианский календарь</a>.<br />
+   <li><a href="images/um_charsmap.png">Таблица символов</a>.</li>
+   <li><a href="images/um_calendar_terra.png">Григорианский календарь</a>.</li>
+   <li>Календари (<a href="images/um_addons_calendars.png">Calendars</a>):<br />
      <a href="images/um_calendar_millo.png">Календарь тысячелетий</a>.<br />
+     <a href="images/um_calendar_hekso.png">16‑ричный календарь</a>.<br />
+     <a href="images/um_calendar_minimum.png">Проект‑минимум календаря</a><br />
+        (вненедельные дни:
+        <a href="images/um_calendar_minimum_02.png">29 февраля</a>,
+        <a href="images/um_calendar_minimum_12.png">31 декабря</a>).<br />
      <a href="images/um_calendar_pern.png">Пернский календарь</a>.
    </li>
   </ul>
- <li>Разные скрипты (<a href="images/um_othersc.png">Other scripts</a>):<br />
-     <a href="images/um_other_info.png">Общая информация</a>,
-     <a href="images/um_other_lfc.png">Применение LF context</a>,
-     <a href="images/um_other_hw.png">Пример Hello, world!</a>.</li>
+ <li>Разные скрипты (<a href="images/um_others.png">Other scripts</a>):<br />
+     <a href="images/um_others_info.png">Общая информация</a>,
+     <a href="images/um_others_lfc.png">Применение LF context</a>,
+     <a href="images/um_others_hello.png">Пример Hello, world!</a>.</li>
  <li>Примеры команд (<a href="images/um_runcmds.png">Command samples</a>):<br />
      Показ File_id.diz различными способами.</li>
  <!--<li>Макросы FAR (<a href="images/um_fmacros.png">FAR macros</a>):<br />
@@ -214,7 +221,7 @@ v.3.0.8.0 [Build от 2013-04-06] (0,075 MiB).</p>
    <li>Закавычивание (<a href="images/eum_q_enquote.png">Quote text</a>).</li>
    <li>Раскавычивание (<a href="images/eum_q_dequote.png">Dequote text</a>).</li>
   </ul></li>
- <li>Lua-скрипты (Lua scripts):<br />
+ <li>Lua‑скрипты (<a href="images/eum_luascripts.png">Lua scripts</a>):<br />
   <ul>
    <li>Чистка текста (<a href="images/eum_cleartext.png">Clear text</a>).</li>
    <li>Усечение пустоты (<a href="images/eum_truncate.png">Truncate void</a>).</li>
@@ -224,7 +231,11 @@ v.3.0.8.0 [Build от 2013-04-06] (0,075 MiB).</p>
 <a name="Rh_SP_LuaPUM"></a>
 <p>Примеры <a href="images/luapum.png">подменю</a> для панелей (LuaPUM).</p>
 <ul>
- <li>Меню Git (<a href="images/pum_git.png">Git menu</a>).</li>
+ <li>Меню Git
+     (<a href="images/pum_git.png">Git menu</a>,
+      <a href="images/pum_git_extlog.png">Extended log</a>,
+      <a href="images/pum_git_revert.png">Reset/revert</a>,
+      <a href="images/pum_git_tag.png">Tag</a>).</li>
  <li>Меню команд TortoiseSVN.
      (<a href="#Rh_SP_tSVN">TortoiseSVN</a> menu).</li>
 </ul>
@@ -280,8 +291,8 @@ v.3.0.8.0 [Build от 2013-04-06] (0,075 MiB).</p>
 </ul>
 
 <p>Ссылка: <em>Тестовая</em>
-<a href="FarScripts/Rh_Scripts-3.0.8.0.7z">сборка пакета</a>
-v.3.0.8.0 [Build от 2013-04-06] (0,202 MiB).</p>
+<a href="FarScripts/Rh_Scripts-3.0.9.2.7z">сборка пакета</a>
+v.3.0.9.2 [Build от 2013-05-01] (0,204 MiB).</p>
 
 <p class="right"><a href="#Content">К оглавлению</a></p>
 
