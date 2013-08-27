@@ -79,6 +79,7 @@ li.none { list-style-type: none }
 .mrg_no  { margin: 0em 0em } /* Отступ нет вертик. и горизонт. */
 .mrg_vs  { margin: 1em 0em } /* Отступ краткий вертик., нет горизонт. */
 .mrg_vl  { margin: 2em 0em } /* Отступ длинный вертик., нет горизонт. */
+.mrg_hl  { margin: 0em 2em } /* Отступ нет вертик., длинный горизонт. */
 
 /* ОФОРМЛЕНИЕ */
 .numb { text-align: right; vertical-align: top; text-indent: 0em }
