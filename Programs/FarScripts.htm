@@ -142,23 +142,51 @@ v.3.1.0.0 [Build от 2013-11-16] (0,077 MiB).</p>
  <li>Утилита <a href="#Rh_SP_RM">
      «Прямоугольное меню»</a> (<b>RectMenu</b>).</li>
  <li>Общие скрипты:<ul>
-  <li>Скрипт «Настраиваемое меню» (<b>CustomMenu</b>).</li>
-  <li>Скрипт «Фильтрационное меню» (<b>FilterMenu</b>).</li>
-  <li>Скрипт «Вызыватель меню выбранного вида» (<b>MenuCaller</b>).</li>
-  <li>Скрипт «Формирователь текста для пунктов меню» (<b>MenuTexter</b>).</li>
-  <li>Скрипт «Календарь» (<b>Calendar</b>).</li>
-  <li>Скрипт «Таблица символов» (<b>CharsMap</b>).</li>
-  <li>Скрипт «Меню из пунктов вывода символов» (<b>CharsMenu</b>).</li>
-  <li>Скрипт «Конфигуратор пакета Rh_Scripts» (<b>rhsConfig</b>).</li>
+  <li>Скрипт «Настраиваемое меню» (CustomMenu).</li>
+  <li>Скрипт «Фильтрационное меню» (FilterMenu).</li>
+  <li>Скрипт «Вызыватель меню выбранного вида» (MenuCaller).</li>
+  <li>Скрипт «Формирователь текста для пунктов меню» (MenuTexter).</li>
+  <li>Скрипт «Календарь» (<a href="#Rh_SP_LUM_Calendars">Calendar</a>).</li>
+  <li>Скрипт «Таблица символов» (<a href="#Rh_SP_LUM_CharsMap">CharsMap</a>).</li>
+  <li>Скрипт «Меню из пунктов вывода символов» (<a href="#Rh_SP_LuaEUM_CharKits">CharsMenu</a>).</li>
+  <li>Скрипт «Конфигуратор пакета Rh_Scripts» (rhsConfig).</li>
  </ul></li>
  <li>Скрипты для редактора:<ul>
-  <li>Скрипт «Текстовые шаблоны» (<b>TextTemplate</b>).</li>
-  <li>Скрипт «Завершение слов» (<b>WordComplete</b>).</li>
-  <li>Скрипт «Усекатель пустоты» (<b>VoidTruncate</b>).</li>
-  <li>Скрипты для использования действий в <i>авторежиме</i>.</li>
+  <li>Скрипт «Текстовые шаблоны» (TextTemplate).</li>
+  <li>Скрипт «Завершение слов» (WordComplete).</li>
+  <li>Скрипт для использования действий (AutoActions и HandActions).</li>
+  <li>Скрипт «Усекатель пустоты» (VoidTruncate).</li>
+  <li>Скрипт для «Усекателя пустоты» в <i>авторежиме</i> (TruncAction).</li>
  </ul></li>
- <li>Служебные скрипты для работы скриптов и утилит.</li>
+ <li>Служебные скрипты для работы скриптов и утилит:<ul>
+  <li>Скрипт «Обработка клавиш» (Keys).</li>
+  <li>Скрипт «Работа с макросами‑шаблонами» (Macro).</li>
+  <li>Скрипт «Обработка текста в редакторе» (Editor).</li>
+  <li>Скрипт «Управление диалогами» (Dialog).</li>
+  <li>Скрипт «Работа с меню и пунктами меню» (Menu).</li>
+  <li>Скрипт «Выполнение действий» (Actions).</li>
+  <li>Скрипт «Lua‑ и LuaFAR‑функции» (Utils).</li>
+  <li>Скрипт «Обработка даты и времени» (DateTime).</li>
+  <li>Скрипт «Работа с пользовательскими типами данных» (Types).</li>
+  <li>Скрипт «Обработка символов» (Character).</li>
+  <li>Скрипт «Разбор данных по Unicode‑символам» (CharsData).</li>
+  <li>Скрипт «Список Unicode‑символов» (CharsList).</li>
+  <li>Скрипт «Некоторые Unicode‑символы и наборы символов» (CharsSets).</li>
+ </ul></li>
 </ul>
+
+<p>Пользовательские настройки пакета сохраняются в каталог
+ <code>%FarProfile%\data\scripts\Rh_Scripts\</code>.
+</p>
+<p>Дополнительные файлы для пакета необходимо располагать в каталоге
+ <code>%FarProfile%\data\scripts\Rh_Scripts\data\</code>.
+</p>
+<p>Дополнительные файлы для некоторых скриптов пакета:</p>
+<ul>
+ <li><code>NamesList.txt</code> — названия символов;</li>
+ <li><code>Blocks.txt</code> — названия блоков (тематических групп) символов.</li>
+</ul>
+</p>
 
 <a name="Rh_SP_LUM"></a>
 <p>Утилита <i>«Пользовательское меню Lua»</i>
@@ -166,12 +194,12 @@ v.3.1.0.0 [Build от 2013-11-16] (0,077 MiB).</p>
 <p>Возможности:</p>
 <ul>
  <li>Привязка файла к типу с помощью пакета
-     <a href="#LF_context">LuaFAR context</a>.</li>
+     <a href="#LF_context">LuaFAR context</a>.</li>
  <li>Привязка типа к выводимому меню в <code>lua</code>-файле.</li>
  <li>Поддерживаемые меню: прямоугольное, фильтрационное и поисковое.</li>
  <li>Виды пунктов: подменю, макросы, шаблоны, скрипты и команды.</li>
  <li>Назначение нескольких комбинаций клавиш на пункты меню.</li>
- <li>Поддержка настроек собственных меню LUM и локализации текста.</li>
+ <li>Поддержка настроек собственных меню LUM и локализации текста.</li>
 </ul>
 
 <p>Примеры меню LUM:</p>
@@ -185,8 +213,11 @@ v.3.1.0.0 [Build от 2013-11-16] (0,077 MiB).</p>
 <ul>
  <li>Дополнения (<a href="images/um_addons.png">Addon scripts</a>):<br />
   <ul>
+   <a name="Rh_SP_LUM_CharsMap"></a>
    <li><a href="images/um_charsmap.png">Таблица символов</a>
-       (<a href="images/um_charsblocks.png">выбор блока</a>).</li>
+      (<a href="images/um_charsblocks.png">выбор блока</a>).
+   </li>
+   <a name="Rh_SP_LUM_Calendars"></a>
    <li>Календари (<a href="images/um_addons_calendars.png">Calendars</a>):<br />
     <ul>
      <li><a href="images/um_calendar_terra.png">Григорианский календарь</a>.</li>
@@ -194,8 +225,9 @@ v.3.1.0.0 [Build от 2013-11-16] (0,077 MiB).</p>
      <li><a href="images/um_calendar_hekso.png">16‑ричный календарь</a>.</li>
      <li><a href="images/um_calendar_minimum.png">Проект‑минимум календаря</a><br />
         (вненедельные дни:
-        <a href="images/um_calendar_minimum_02.png">29 февраля</a>,
-        <a href="images/um_calendar_minimum_12.png">31 декабря</a>).</li>
+         <a href="images/um_calendar_minimum_02.png">29 февраля</a>,
+         <a href="images/um_calendar_minimum_12.png">31 декабря</a>).
+     </li>
      <li><a href="images/um_calendar_pern.png">Пернский календарь</a>.</li>
     </ul>
    </li>
@@ -213,12 +245,15 @@ v.3.1.0.0 [Build от 2013-11-16] (0,077 MiB).</p>
 <a name="Rh_SP_LuaEUM"></a>
 <p>Примеры <a href="images/luaeum.png">подменю</a> для редактора (LuaEUM):</p>
 <ul>
+ <a name="Rh_SP_LuaEUM_Insert"></a>
  <li>Вставка шаблона (Template Insert).<br />
      Готовые подменю для
      <a href="images/eum_j_lua.png">Lua</a>,
      <a href="images/eum_j_ccpp.png">C/C++</a>,
      <a href="images/eum_j_pascal.png">Pascal</a>,
-     <a href="images/eum_j_html.png">Html</a>.</li>
+     <a href="images/eum_j_html.png">Html</a>.
+ </li>
+ <a name="Rh_SP_LuaEUM_CharKits"></a>
  <li>Наборы символов (<a href="images/um_charkits.png">Character kits</a>):
   <ul>
    <li>Буквы (<a href="images/um_clet_greek.png">греческие</a>,
@@ -227,30 +262,41 @@ v.3.1.0.0 [Build от 2013-11-16] (0,077 MiB).</p>
                    <a href="images/um_cmath_scripts.png">различные индексы</a>).</li>
    <li>Пунктуация (<a href="images/um_cpunct_symbols.png">символы‑знаки</a>,
                    <a href="images/um_cpunct_spaces.png">пробелы и черты</a>).</li>
-  </ul></li>
+  </ul>
+ </li>
  <li>Кавычки/скобки (<a href="images/eum_q_quotes.png">Quotes/brackets</a>):
   <ul>
    <li>Закавычивание (<a href="images/eum_q_enquote.png">Quote text</a>).</li>
    <li>Раскавычивание (<a href="images/eum_q_dequote.png">Dequote text</a>).</li>
-  </ul></li>
+  </ul>
+ </li>
  <li>Lua‑скрипты (<a href="images/eum_luascripts.png">Lua scripts</a>):<br />
   <ul>
    <li>Чистка текста (<a href="images/eum_cleartext.png">Clear text</a>).</li>
    <li>Усечение пустоты (<a href="images/eum_truncate.png">Truncate void</a>).</li>
    <li>Изменение символов (<a href="images/eum_charchange.png">Change characters</a>).</li>
-  </ul></li>
+  </ul>
+ </li>
+ <a name="Rh_SP_LuaEUM_Subs"></a>
+ <li><a href="images/eum_subs.png">Субтитры</a> для файлов ass/ssa, srt
+    (<a href="images/eum_subs_clause.png">текущая фраза</a>).
+ </li>
 </ul>
 
 <a name="Rh_SP_LuaPUM"></a>
 <p>Примеры <a href="images/luapum.png">подменю</a> для панелей (LuaPUM).</p>
 <ul>
+ <a name="Rh_SP_LuaPUM_Git"></a>
  <li>Меню Git
      (<a href="images/pum_git.png">Git menu</a>,
       <a href="images/pum_git_extlog.png">Extended log</a>,
       <a href="images/pum_git_revert.png">Reset/revert</a>,
-      <a href="images/pum_git_tag.png">Tag</a>).</li>
+      <a href="images/pum_git_tag.png">Tag</a>).
+ </li>
+ <a name="Rh_SP_LuaPUM_tSVN"></a>
  <li>Меню команд TortoiseSVN.
-     (<a href="#Rh_SP_tSVN">TortoiseSVN</a> menu).</li>
+     (<a href="#Rh_SP_tSVN">TortoiseSVN</a> menu).
+ </li>
 </ul>
 
 <a name="Rh_SP_tSVN"></a>
@@ -261,22 +307,27 @@ v.3.1.0.0 [Build от 2013-11-16] (0,077 MiB).</p>
  <li>Аналог контекстного меню TortoiseSVN Проводника.</li>
  <li>Работает только с текущим элементом активной неплагиновой панели.</li>
  <li>Различаются: файл/папка, рабочая копия или нет, версионированный или нет.</li>
- <li>Для работы используются <code>TortoiseProc.exe</code>
-     и <code>SubWCRev.exe</code> из TortoiseSVN.</li>
+ <li>Для работы используются
+     <code>TortoiseProc.exe</code> и <code>SubWCRev.exe</code> из TortoiseSVN.
+ </li>
  <li>Настройки хранятся в файле<br />
-  <code>%FarProfile%\scripts\Rh_Scripts\LumSVN\config\TortoiseSVN.cfg</code>.</li>
+  <code>%FarProfile%\data\scripts\Rh_Scripts\LumSVN\config\TortoiseSVN.cfg</code>.
+ </li>
 </ul>
 
 <p>Иллюстрация подменю «TortoiseSVN»:</p>
 <ul>
-  <li>версионированные
-      <a href="images/tsvn_svndir.png">папка</a>
-    и <a href="images/tsvn_svnfile.png">файл</a></li>
-  <li><a href="images/tsvn_nwcdir.png">папка</a>
-    и <a href="images/tsvn_nwcfile.png">файл</a> нерабочей копии,</li>
-  <li>неверсионированные
-      <a href="images/tsvn_unvdir.png">папка</a>
-    и <a href="images/tsvn_unvfile.png">файл</a>.</li>
+ <li>версионированные
+     <a href="images/tsvn_svndir.png">папка</a>
+   и <a href="images/tsvn_svnfile.png">файл</a>,
+ </li>
+ <li><a href="images/tsvn_nwcdir.png">папка</a>
+   и <a href="images/tsvn_nwcfile.png">файл</a> нерабочей копии,
+ </li>
+ <li>неверсионированные
+     <a href="images/tsvn_unvdir.png">папка</a>
+   и <a href="images/tsvn_unvfile.png">файл</a>.
+ </li>
 </ul>
 
 <p> </p>
@@ -291,6 +342,15 @@ v.3.1.0.0 [Build от 2013-11-16] (0,077 MiB).</p>
  <li>Маркирование цветом заданных символов текста пунктов меню.</li>
  <li>Поддерживаемые меню: фильтрационное и поисковое.</li>
  <li>Внешний вид: список, главное меню, всплывающее меню и т.д.</li>
+ <li>Примеры:
+     <a href="#Rh_SP_LUM_Calendars">Календари</a>,
+     <a href="#Rh_SP_LUM_CharsMap">Таблица символов</a>,
+     <a href="#Rh_SP_LuaEUM_CharKits">Наборы символов</a>,
+     <a href="#Rh_SP_LuaEUM_Insert">Вставка шаблона</a>,
+     <a href="#Rh_SP_LuaPUM_Git">Git</a>,
+     <a href="#Rh_SP_LuaPUM_tSVN">TortoiseSVN</a>,
+     <a href="#"></a>.
+ </li>
 </ul>
 
 <p> </p>
