@@ -29,6 +29,7 @@
  <li><a href="#LF_context">Пакет LF context</a></li>
  <li><a href="#Rh_Scripts">Пакет Rh_Scripts</a></li>
  <li><a href="#Rh_Macros">Пакет Rh_Macros</a></li>
+ <li><a href="#LuaSpell">Макрос LuaSpell</a></li>
  <li><a href="#Rh_Presets">Пакет Rh_Presets</a></li>
  <li><a href="#LFA_config">Пакет LFA config</a></li>
  <li><a href="#fl_scripts">Набор fl_scripts</a></li>
@@ -121,8 +122,8 @@ LF context требуется для работы
 <a href="FarScripts/LF_context-3.1.0.1.7z">сборка пакета</a>
 v.3.1.0.1 [Build от 2014-03-03] (0,077 MiB).</p>
 
-<p><b>Внимание:</b>
-Перед установкой обязательно прочтите <code>install.rus</code>.
+<p><b>Внимание</b>:
+Перед установкой обязательно прочтите <code>context\doc\install.rus</code>.
 Для "LuaFAR для Редактора" пакет достаточно установить в каталог плагина.
 Пакет можно установить в каталог, доступный для всех скриптов LuaFAR.
 Порядок задания такого каталога описан в файле справки
@@ -401,6 +402,38 @@ v.3.1.0.1 [Build от 2014-03-03] (0,017 MiB).</p>
 
 <p class="right"><a href="#Content">К оглавлению</a></p>
 
+<a name="LuaSpell"></a>
+<h3>Макрос LuaSpell</h3>
+
+<p>LuaSpell — макрос для проверки орфографии в редакторе FAR Manager.</p>
+<p>Макрос использует библиотеку hunspell из проекта luapower.</p>
+
+<p> </p>
+<p>Для работы макроса требуется:</p>
+<ul>
+ <li>FAR Manager v.3.0 build 3817.</li>
+ <!--<li>Lua v.5.1.5 (lua5.1.dll или lua51.dll).</li>-->
+ <!--<li>Hunspell v.1.3.2.</li>-->
+</ul>
+
+<a name="LuaSpell_Link"></a>
+<p>Ссылка: <!--<i>Тестовая</i>-->
+<a href="FarScripts/LuaSpell-3.1.0.0.7z">сборка</a>
+v.3.1.0.0 [Build от 2014-05-03] (0,251 MiB),<br />
+русский (с "ё") и английский
+<a href="FarScripts/LuaSpell-Dictionaries.7z">словари</a>
+в кодировке UTF‑8 (0,606 MiB).</p>
+
+<p><b>Внимание</b>:</p>
+<ul>
+ <li>Перед установкой макроса прочтите
+     <code>LuaSpell\doc\Install.rus</code>.</li>
+ <li>Все файлы словарей должны быть в кодировке UTF‑8 без BOM,
+     а в первой строке aff‑файлов нужно прописать <code>SET UTF-8</code>.</li>
+</ul>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
 <a name="Rh_Presets"></a>
 <h3>Пакет Rh_Presets</h3>
 
@@ -501,6 +534,8 @@ v.3.1.0.0 [Build от 2013-11-16] (0,033 MiB).<br /></p>
  <a href="http://forum.farmanager.com/">форум</a>,
  <a href="http://plugring.farmanager.com/index.php">PlugRing</a>.
 </li>
+<li>Пакет <a href="http://luapower.com/">luapower</a>:
+    <a href="http://luapower.com/hunspell">hunspell</a>.</li>
 </ul>
 
 <p>Страницы:</p>
@@ -521,10 +556,15 @@ v.3.1.0.0 [Build от 2013-11-16] (0,033 MiB).<br /></p>
 <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=2833">обсуждение</a>,
 <a href="https://github.com/shmuz/LuaFAR/">GitHub</a>.</li>-->
 <li>LuaFAR for Editor:
- <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=3551">обсуждение</a>,
- <a href="https://github.com/shmuz/luafar4editor/">GitHub</a>.</li>
+ <a href="http://forum.farmanager.com/viewtopic.php?f=5&t=3552">обсуждение</a>,
+ <a href="https://github.com/shmuz/luafar4editor/">GitHub</a>,
+ <a href="http://plugring.farmanager.com/plugin.php?pid=851&l=ru">PlugRing</a>.</li>
+<li>LuaFAR History:
+ <a href="http://forum.farmanager.com/viewtopic.php?f=5&t=7950">обсуждение</a>,
+ <a href="http://plugring.farmanager.com/plugin.php?pid=922&l=ru">PlugRing</a>.</li>
 <li>LuaFAR Search:
- <a href="http://forum.farmanager.com/viewtopic.php?f=11&t=4752">обсуждение</a>.</li>
+ <a href="http://forum.farmanager.com/viewtopic.php?f=5&t=4755">обсуждение</a>,
+ <a href="http://plugring.farmanager.com/plugin.php?pid=858&l=ru">PlugRing</a>.</li>
 </ul>
 
 <p>Скрипты и пакеты:</p>
@@ -542,6 +582,9 @@ v.3.1.0.0 [Build от 2013-11-16] (0,033 MiB).<br /></p>
 <li>Пакет Rh_Macros:
  <a href="https://github.com/Raidar/Rh_Macros/">GitHub</a>,
  <a href="http://plugring.farmanager.com/plugin.php?pid=889&l=ru">PlugRing</a>.</li>
+<li>Макрос LuaSpell:
+ <a href="http://forum.farmanager.com/viewtopic.php?f=60&t=8640">обсуждение</a>,
+ <a href="http://plugring.farmanager.com/plugin.php?pid=937&l=ru">PlugRing</a>.</li>
 <li>Пакет Rh_Presets:
  <a href="https://github.com/Raidar/Rh_Presets/">GitHub</a>.</li>
 <li>Пакет LFA config:
