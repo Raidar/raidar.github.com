@@ -1,25 +1,54 @@
 /* ТЭГИ HTML */
-/*body { font-family: sans-serif;
-       margin: 1em; padding: 0em; border-style: none }*/
-body { font-family: sans-serif; border-style: none }
-h1, h2, h3, h4 { font-family: serif; vertical-align: baseline;
-                 text-align: center; text-indent: 0em } /* Заголовки */
-h1, h2, h3, h4 { margin: 0.25em 0.5em }
-h3 { font-style: italic }
-p { text-align: justify; vertical-align: baseline;
-    text-indent: 2em; margin: 0em } /* Абзац */
-sub, sup { font-size: x-small } /* Индекс */
+/*body {
+  font-family: sans-serif;
+  margin: 1em;
+  padding: 0em;
+  border-style: none;
+}*/
+body {
+  font-family: sans-serif;
+  border-style: none;
+}
 
-h1 { font-size: x-large }
-h2 { font-size: large }
-h3 { font-size: medium }
-h4 { font-size: small }
-p  { font-size: medium }
+h1, h2, h3, h4 { /* Заголовки */
+  font-family: serif;
+  vertical-align: baseline;
+  text-align: center;
+  text-indent: 0em;
+  margin: 0.25em 0.5em;
+}
+h3 {
+  font-style: italic;
+}
+h1 { font-size: x-large; }
+h2 { font-size: large; }
+h3 { font-size: medium; }
+h4 { font-size: small; }
 
-blockquote { text-align: justify; vertical-align: baseline;
-             text-indent: 2em; margin: 1em 6em 1em 8em } /* Блок-цитата */
+p { /* Абзац */
+  font-size: medium;
+  text-align: justify;
+  vertical-align: baseline;
+  text-indent: 2em;
+  margin: 0em
+}
 
-hr { width: 90% }
+sub, sup { /* Индекс */
+  font-size: x-small;
+  /*font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;*/
+}
+
+blockquote { /* Блок-цитата */
+  text-align: justify;
+  vertical-align: baseline;
+  text-indent: 2em;
+  margin: 1em 6em 1em 8em;
+}
+
+hr { width: 90%; }
 
 /* КЛАССЫ */
 .normal { font-size: medium }
