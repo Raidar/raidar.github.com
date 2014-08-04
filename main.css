@@ -91,6 +91,10 @@ li.none { list-style-type: none }
 ._indent { text-indent: 2em }
 ._indent2 { text-indent: 3em }
 ._indent3 { text-indent: 4em }
+._origin  {
+  text-indent: 0em;
+  margin: 0.25em 4em
+}
 
 /* ID - по вертикали */
 ._top    { vertical-align: top }
