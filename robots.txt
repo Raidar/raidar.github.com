@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /Programs/images/
 Disallow: /Programs/Reserve/
+Disallow: /Programs/Sentence/
