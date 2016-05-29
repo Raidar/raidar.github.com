@@ -26,7 +26,8 @@
 <ul>
 <li><a href="#Packs">Пакеты</a>
  <ul>
- <li><a href="#LF_context">Пакет LF context</a></li>
+ <li><a href="#LF_context">Пакет LuaFAR context</a></li>
+ <li><a href="#LF_plugin">Пакет LuaFAR plugin</a></li>
  <li><a href="#Rh_Scripts">Пакет Rh_Scripts</a></li>
  <li><a href="#Rh_Macros">Пакет Rh_Macros</a></li>
  <li><a href="#LuaSpell">Макрос LuaSpell</a></li>
@@ -43,7 +44,7 @@
 
 <hr />
 
-<p>Все иллюстрации выполнены в FAR Manager
+<p>Все иллюстрации выполнены в FAR Manager
 с выбранным шрифтом "DejaVu Sans Mono".</p>
 
 <hr />
@@ -52,7 +53,7 @@
 <h2>LuaFAR</h2>
 
 <p>Библиотека LuaFAR расширяет возможности FAR Manager,
-позволяя писать плагины, скрипты и утилиты на языке Lua.</p>
+позволяя писать плагины, скрипты и утилиты на языке Lua.</p>
 <p>Скрипты обычно реализуют простые действия, утилиты — более сложные,
 комплексные. Скрипты и утилиты обычно объединяются в наборы и пакеты
 в соответствии с предпочтениями их разработчиков.</p>
@@ -95,7 +96,7 @@ FAR Manager с использованием различных регулярн
 <h2>Пакеты</h2>
 
 <a name="LF_context"></a>
-<h3>Пакет LF context</h3>
+<h3>Пакет LuaFAR context</h3>
 
 <p>LuaFAR context — пакет для определения типов файлов и работы
 с файлами конфигураций параметров, связанных с типами файлов.</p>
@@ -105,7 +106,7 @@ FAR Manager с использованием различных регулярн
 <p>Пакет разработан на основе конфигураций,
 используемых в <b>fl_scripts</b>, доработан
 и расширен совместными усилиями с <b>maxfl</b> .
-LF context требуется для работы
+LuaFAR context требуется для работы
 пакета <a href="#Rh_Scripts">Rh_Scripts</a>,
 пакета <a href="#LFA_config">LuaFAR area config</a>,
 и набора <a href="#fl_scripts">fl_scripts</a>.</p>
@@ -121,14 +122,31 @@ LF context требуется для работы
 <p>Ссылка: <!--<i>Тестовая</i>-->
 <a href="FarScripts/LF_context-3.1.5.0.7z">сборка пакета</a>
 v.3.1.5.0 [Build от 2016-05-25] (0,078 MiB).</p>
+<p>Ссылка: <i>Тестовая</i>
+<a href="FarScripts/LF_context-3.3.0.0.7z">сборка пакета</a>
+v.3.3.0.0 [Build от 2016-05-29] (0,078 MiB).</p>
 
 <p><b>Внимание</b>:
 Перед установкой обязательно прочтите <code>context\doc\install.rus</code>.
 Для "LuaFAR для Редактора" пакет достаточно установить в каталог плагина.
+Для "LuaFAR plugin" пакет достаточно установить в каталог <code>modules</code>
+каталога макросов FAR.
 Пакет можно установить в каталог, доступный для всех скриптов LuaFAR.
 Порядок задания такого каталога описан в файле справки
 <code>context\faq\faq_rus.hlf</code>,
 тема «Где размещать общие скрипты и библиотеки?».</p>
+
+<p class="right"><a href="#Content">К оглавлению</a></p>
+
+<a name="LF_plugin"></a>
+<h3>Пакет LuaFAR plugin</h3>
+
+<p>LuaFAR plugin — пакет для использования пакетов скриптов,
+написанных для "LuaFAR for Editor", в плагине LuaMacro.</p>
+
+<p>Ссылка: <i>Тестовая</i>
+<a href="FarScripts/LF_plugin-3.0.0.1.7z">сборка пакета</a>
+v.3.0.0.1 [Build от 2016-05-29] (0,026 MiB).</p>
 
 <p class="right"><a href="#Content">К оглавлению</a></p>
 
@@ -149,9 +167,12 @@ v.3.1.5.0 [Build от 2016-05-25] (0,078 MiB).</p>
   <li>Скрипт «Фильтрационное меню» (FilterMenu).</li>
   <li>Скрипт «Вызыватель меню выбранного вида» (MenuCaller).</li>
   <li>Скрипт «Формирователь текста для пунктов меню» (MenuTexter).</li>
-  <li>Скрипт «Календарь» (Calendar, см. <a href="#Rh_SP_LUM_Calendars">календари</a>).</li>
-  <li>Скрипт «Таблица символов» (CharsMap, см. <a href="#Rh_SP_LUM_CharsMap">таблицу символов</a>).</li>
-  <li>Скрипт «Меню из пунктов вывода символов» (CharsMenu, см. <a href="#Rh_SP_LuaEUM_CharKits">наборы символов</a>).</li>
+  <li>Скрипт «Календарь»
+      (Calendar, см. <a href="#Rh_SP_LUM_Calendars">календари</a>).</li>
+  <li>Скрипт «Таблица символов»
+      (CharsMap, см. <a href="#Rh_SP_LUM_CharsMap">таблицу символов</a>).</li>
+  <li>Скрипт «Меню из пунктов вывода символов»
+      (CharsMenu, см. <a href="#Rh_SP_LuaEUM_CharKits">наборы символов</a>).</li>
   <li>Скрипт «Конфигуратор пакета Rh_Scripts» (rhsConfig).</li>
  </ul></li>
  <li>Скрипты для редактора:<ul>
@@ -240,7 +261,7 @@ v.3.1.5.0 [Build от 2016-05-25] (0,078 MiB).</p>
   </ul>
  <li>Разные скрипты (<a href="images/um_others.png">Other scripts</a>):<br />
      <a href="images/um_others_info.png">Общая информация</a>,
-     <a href="images/um_others_lfc.png">Применение LF context</a>,
+     <a href="images/um_others_lfc.png">Применение LuaFAR context</a>,
      <a href="images/um_others_hello.png">Пример Hello, world!</a>.</li>
  <li>Примеры команд (<a href="images/um_runcmds.png">Command samples</a>):<br />
      Показ File_id.diz различными способами.</li>
@@ -376,7 +397,7 @@ v.3.1.5.0 [Build от 2016-05-25] (0,078 MiB).</p>
  <li>FAR Manager v.3.0 build 4575.</li>
  <!--<li>Lua v.5.1.5 (lua5.1.dll или lua51.dll).</li>-->
  <li>LuaFAR for Editor v.3.7.1 .</li>
- <li>LF context v.3.1.5.0 .</li>
+ <li>LuaFAR context v.3.1.5.0 .</li>
  <li>для flsLUM — <a href="#fl_scripts">fl_scripts</a> v.3.1.0.0+ .</li>
 </ul>
 
@@ -384,6 +405,9 @@ v.3.1.5.0 [Build от 2016-05-25] (0,078 MiB).</p>
 <p>Ссылка: <!--<i>Тестовая</i>-->
 <a href="FarScripts/Rh_Scripts-3.2.3.0.7z">сборка пакета</a>
 v.3.2.3.0 [Build от 2016-05-25] (0,247 MiB).</p>
+<p>Ссылка: <i>Тестовая</i>
+<a href="FarScripts/Rh_Scripts-3.3.0.0.7z">сборка пакета</a>
+v.3.3.0.0 [Build от 2016-05-29] (0,247 MiB).</p>
 
 <p class="right"><a href="#Content">К оглавлению</a></p>
 
@@ -401,7 +425,7 @@ v.3.2.3.0 [Build от 2016-05-25] (0,247 MiB).</p>
  <li>FAR Manager v.3.0 build 4575.</li>
  <!--<li>Lua v.5.1.5 (lua5.1.dll или lua51.dll).</li>-->
  <li>LuaFAR for Editor v.3.7.1 .</li>
- <li>LF context v.3.1.5.0 .</li>
+ <li>LuaFAR context v.3.1.5.0 .</li>
  <li>Rh_Scripts v.3.2.3.0 .</li>
 </ul>
 
@@ -409,6 +433,9 @@ v.3.2.3.0 [Build от 2016-05-25] (0,247 MiB).</p>
 <p>Ссылка: <!--<i>Тестовая</i>-->
 <a href="FarScripts/Rh_Macros-3.2.3.0.7z">сборка пакета</a>
 v.3.2.3.0 [Build от 2016-05-25] (0,018 MiB).</p>
+<p>Ссылка: <i>Тестовая</i>
+<a href="FarScripts/Rh_Macros-3.3.0.0.7z">сборка пакета</a>
+v.3.3.0.0 [Build от 2016-05-29] (0,018 MiB).</p>
 
 <p class="right"><a href="#Content">К оглавлению</a></p>
 
@@ -466,7 +493,7 @@ v.1.3.2 (0,233 MiB),<br />
  <li>FAR Manager v.3.0 build 4190.</li>
  <!--<li>Lua v.5.1.5 (lua5.1.dll или lua51.dll).</li>-->
  <li>LuaFAR Search v.3.16.1 .</li>
- <!--<li>LF context v.3.1.1.0 .</li>-->
+ <!--<li>LuaFAR context v.3.1.1.0 .</li>-->
 </ul>
 
 <a name="Rh_Presets_Link"></a>
@@ -507,7 +534,7 @@ v.3.1.2.0 [Build от 2015-01-10] (0,007 MiB).</p>
  <li>FAR Manager v.3.0 build 4190.</li>
  <!--<li>Lua v.5.1.5 (lua5.1.dll или lua51.dll).</li>-->
  <li>LuaFAR for Editor v.3.6.0 .</li>
- <li>LF context v.3.1.1.0 .</li>
+ <li>LuaFAR context v.3.1.1.0 .</li>
 </ul>
 
 <a name="LFA_config_Link"></a>
@@ -528,7 +555,7 @@ v.3.1.1.0 [Build от 2015-01-10] (0,017 MiB).</p>
  <li>FAR Manager v.3.0 build 3707.</li>
  <!--<li>Lua v.5.1.5 (lua5.1.dll или lua51.dll).</li>-->
  <li>LuaFAR for Editor v.3.4.0 .</li>
- <li>LF context v.3.1.0.0 .</li>
+ <li>LuaFAR context v.3.1.0.0 .</li>
 </ul>
 
 <a name="fl_scripts_link"></a>
@@ -585,7 +612,7 @@ v.3.1.0.0 [Build от 2013-11-16] (0,033 MiB).<br /></p>
 
 <p>Скрипты и пакеты:</p>
 <ul>
-<li>Пакет LF context:
+<li>Пакет LuaFAR context:
  <a href="http://forum.farmanager.com/viewtopic.php?f=15&t=5140">обсуждение</a>,
  <a href="https://github.com/Raidar/LuaFAR-context/">GitHub</a>,
  <a href="http://plugring.farmanager.com/plugin.php?pid=887&l=ru">PlugRing</a>.
