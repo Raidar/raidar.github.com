@@ -27,7 +27,7 @@
 <li><a href="#Packs">Пакеты</a>
  <ul>
  <li><a href="#LF_context">Пакет LuaFAR context</a></li>
- <li><a href="#LF_plugin">Пакет LuaFAR plugin</a></li>
+ <li><a href="#UM_Adaptor">Пакет UM Adaptor</a></li>
  <li><a href="#Rh_Scripts">Пакет Rh_Scripts</a></li>
  <li><a href="#Rh_Macros">Пакет Rh_Macros</a></li>
  <li><a href="#LuaSpell">Макрос LuaSpell</a></li>
@@ -58,7 +58,7 @@
 комплексные. Скрипты и утилиты обычно объединяются в наборы и пакеты
 в соответствии с предпочтениями их разработчиков.</p>
 <p>Начиная с FAR v.3.0 build 2851 библиотека вошла в состав FAR Manager,
-а язык Lua заменил использовавшийся до этого встроенный язык макросов.</p>
+а язык Lua заменил использовавшийся до этого встроенный язык макросов.</p>
 <p> </p>
 <p>Библиотека LuaFAR, плагины LuaFAR for Editor, LuaFAR Search, LuaFAR History,
 а также ряд других плагинов и макросов разработаны Сэмуэлом Зейгерманом
@@ -129,24 +129,35 @@ v.3.3.0.0 [Build от 2016-05-29] (0,078 MiB).</p>
 <p><b>Внимание</b>:
 Перед установкой обязательно прочтите <code>context\doc\install.rus</code>.
 Для "LuaFAR для Редактора" пакет достаточно установить в каталог плагина.
-Для "LuaFAR plugin" пакет достаточно установить в каталог <code>modules</code>
+Для "UM Adapter" пакет достаточно установить в каталог <code>modules</code>
 каталога макросов FAR.
 Пакет можно установить в каталог, доступный для всех скриптов LuaFAR.
 Порядок задания такого каталога описан в файле справки
-<code>context\faq\faq_rus.hlf</code>,
-тема «Где размещать общие скрипты и библиотеки?».</p>
+<code>context\faq\faq_rus.hlf</code>
+(тема «Где размещать общие скрипты и библиотеки?»).</p>
 
 <p class="right"><a href="#Content">К оглавлению</a></p>
 
-<a name="LF_plugin"></a>
-<h3>Пакет LuaFAR plugin</h3>
+<a name="UM_Adaptor"></a>
+<h3>Пакет UM Adaptor</h3>
 
-<p>LuaFAR plugin — пакет для использования пакетов скриптов,
+<p>UM Adaptor — пакет для использования пакетов скриптов,
 написанных для "LuaFAR for Editor", в плагине LuaMacro.</p>
 
 <p>Ссылка: <i>Тестовая</i>
-<a href="FarScripts/LF_plugin-3.0.0.1.7z">сборка пакета</a>
-v.3.0.0.1 [Build от 2016-05-29] (0,026 MiB).</p>
+<a href="FarScripts/UM_Adapter-3.0.0.2.7z">сборка пакета</a>
+v.3.0.0.2 [Build от 2016-05-30] (0,027 MiB).</p>
+
+<p> </p>
+<p>Ссылка: <i>Тестовая полная</i>
+<a href="FarScripts/UMA-v.3.0.0.3-full.7z">сборка пакета</a>
+v.3.0.0.3 full [Build от 2016-05-30] (0,437 MiB).</p>
+<p><b>Внимание</b>:
+Полная сборка предназначена только для первоначальной установки пакета.
+В состав сборки включён файл <code>scripts\_macroinit.lua.example</code>.
+После распаковки архива необходимо переименовать его в <code>_macroinit.lua</code>
+(если такого файла в <code>scripts</code> нет) или вставить его содержимое
+в начало <code>_macroinit.lua</code> (если такой файл существует).</p>
 
 <p class="right"><a href="#Content">К оглавлению</a></p>
 
@@ -616,6 +627,11 @@ v.3.1.0.0 [Build от 2013-11-16] (0,033 MiB).<br /></p>
  <a href="http://forum.farmanager.com/viewtopic.php?f=15&t=5140">обсуждение</a>,
  <a href="https://github.com/Raidar/LuaFAR-context/">GitHub</a>,
  <a href="http://plugring.farmanager.com/plugin.php?pid=887&l=ru">PlugRing</a>.
+</li>
+<li>Пакет UM Adaptor:
+ <!--<a href="http://forum.farmanager.com/viewtopic.php?f=15&t=5140">обсуждение</a>,-->
+ <a href="https://github.com/Raidar/UM-Adaptor/">GitHub</a><!--,
+ <a href="http://plugring.farmanager.com/plugin.php?pid=887&l=ru">PlugRing</a>-->.
 </li>
 <li>Пакет Rh_Scripts:
  <a href="http://forum.farmanager.com/viewtopic.php?f=15&t=4387">обсуждение</a>,
